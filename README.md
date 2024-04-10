@@ -1,50 +1,34 @@
 # ![[tktk Module Name]](./assets/tktk-hero.png)
 
-## About
+Linked lists are a foundational data structure that many other, more complex structures use as their basis. 
 
-tktk Write a short but descriptive summary of the content in this module. Introduce the lab. What will the students build in this lab?
+There are two components to this lesson:
+
+1. [Linked List](./linked-list/README.md)
+2. [Exercises: Implementing a Linked List](./exercise/README.md)
+
+## Learning Objectives
+
+By the end of this lesson, you'll be able to:
+
+- Define a linked list.
+- Explain how a node stores data. 
+- Identify situations where you use a linked list instead of an array.
+- Build a singly linked list.
 
 ## Prerequisites
 
-- tktk
+- Big O Notation
 
-## Time to complete
+## Duration
 
-Estimated time to complete core lab exercise: **tktk min**
+1.5 hours total:
 
-## Starter code
+- [Linked List](./linked-list/README.md) - 0.5 hour 
+- [Exercises: Implementing a Linked List](./exercise/README.md) - 1 hour 
 
-tktk If there is not a starter code repo that students will fork and clone to start this lab, then this section and all of its content should be removed.
+## Additional Resources
 
-🟢 [Starter code](#tktk-repository-for-starter-code)
-
-## Content
-
-- [Setup](./setup/README.md)
-- [Exercise](./exercise/README.md)
-
-## Level Up
-
-🚀 [Level Up](./level-up/README.md) tktk - remove section if no level ups exist.
-
-## Solution code
-
-🏁 [tktk Solution code](#tktk-external-repo-link-url)
-
-## Deployed sites
-
-tktk If there is not a deployed site related to this module this section and all of its content should be removed.
-
-🌐 [Live site](#tktk-deployed-app-url)
-
-🐙 [Repository](#tktk-repository-for-deployed-app)
-
-## Internal resources
-
-✏️ [Instructor Guide](./internal-resources/instructor-guide.md)
-
-🏗️ [Release Notes](./internal-resources/release-notes.md)
-
----
-
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/blob/main/module-feedback.md)!**
+- The top 20 [linked list interview questions](https://www.geeksforgeeks.org/top-20-linked-list-interview-question/) (that's a LOT!).
+- Visualize [building a linked list](https://visualgo.net/bn/list).
+- Learn more about [doubly linked lists](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/doubly-linked-list) (we only cover a singly linked list in the exercise).
