@@ -12,7 +12,7 @@ The key component of a linked list is a **node**. Other advanced data structures
 
 - A `data` property that stores a value.
 - A `next` property, sometimes called a “pointer,” that points to the next item in the list.
-- 
+
 In the case of linked lists, the only exception to this rule is the very last node. It doesn’t need a pointer, so it’s known as a “null next node” (or more simply, “the tail”).
 
 ## Linked Lists vs. Arrays
@@ -126,9 +126,3 @@ Linked lists are a common topic that comes up in technical job interviews. You c
 - Traversing a linked list.
 
 Often, these concepts will appear as whiteboarding problems, so you won’t need to know how to code a linked list — just how to draw it and explain it conceptually. [This tool](https://visualgo.net/en/list?slide=1) can help you visualize adding, removing, and searching for values in a linked list.
-
-## Linked Lists in Interviews
-
-One of the interviewers came in and said we were going to whiteboard an algorithm, so I said, “Fine!” He said, “We’re going to do linked lists,” and then said, “I have to admit, I don’t know how to solve this problem, but let’s just see where we go.” So we started!
-
-I’m more a visual person, so the thing that was really great when I learned algorithms in WDI in San Francisco, and what I do with my students as well, is that I have them act things out and I draw things. I had a very good recall of what, visually, the linked list looked like, so I was able to draw that out and explain it, but I wasn’t able to take it beyond that point. But he was happy with what I had had so far.
