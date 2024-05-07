@@ -1,4 +1,4 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![Computer Science - Linked Lists](./assets/hero.png)
 
 Linked lists are a foundational data structure that many other, more complex structures use as their basis. 
 
