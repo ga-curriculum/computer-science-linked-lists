@@ -1,4 +1,4 @@
-# ![Computer Science - Linked Lists - tktk Microlesson Name](./assets/hero.png)
+# ![Computer Science - Linked Lists - Lesson](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will be able to tktk
 
@@ -16,6 +16,8 @@ The key component of a linked list is a **node**. Other advanced data structures
 In the case of linked lists, the only exception to this rule is the very last node. It doesn’t need a pointer, so it’s known as a “null next node” (or more simply, “the tail”).
 
 ## Linked Lists vs. Arrays
+
+TKTK VIDEO
 
 Let’s talk about linked lists versus arrays. The most important difference between them is how they use computer memory.
 
@@ -42,11 +44,13 @@ So far, we’ve talked about using Big O notation to evaluate the efficiency of 
 Let’s compare the performance of arrays and linked lists:
 
 | Data Structure | Access | Search | Insertion | Deletion |
-|----------------|--------|--------|-----------|----------|
+| -------------- | ------ | ------ | --------- | -------- |
 | Array          | O(1)   | O(N)   | O(N)      | O(N)     |
 | Linked list    | O(N)   | O(N)   | O(1)      | O(1)     |
 
 ## Accessing and Searching
+
+TKTK VIDEO
 
 Why are arrays so much easier to access and search than linked lists?
 
@@ -60,7 +64,9 @@ OK. When you’re building a linked list, the data and pointer properties of eac
 
 Any linked list starts with a `head` property that references the first node. When we start sketching, the list is empty. So, we’ll set the `head` pointer as `null`, because we don’t yet have other nodes or data values.
 
-tktk - Hunter can you add a diagram here of the a linked list with a head node pointing to null?
+![Head and Null](./assets/1-Head-Null.png)
+<br>
+<br>
 
 The default (and easiest) place to add more nodes to a linked list is at the end of the list.
 
@@ -68,7 +74,15 @@ Remember, the first node must be set as the `head`. To this, we’ll add a `next
 
 By default, this new node won’t need a pointer, because it will be the last node in the list. So, the pointer will have a `null` value for now.
 
-tktk - Hunter can you add a diagram here of the a linked list with a head node pointing to a new node with data and a null pointer?
+![Node and Null](./assets/2-Node-Null.png)
+<br>
+<br>
+
+For all future nodes that we add, we can find the last node by looking for the node with `null` as its `next` value. Once we find it, we can change its `next` property to now point to the new node we’re inserting into the list.
+
+![Head Node Null](./assets/3-Head-Node-Null.png)
+<br>
+<br>
 
 ## Traversing a Linked List
 
@@ -80,7 +94,7 @@ Traversing has to start at `head` and then use the `next` pointers to iterate th
 let walker = this.head;
 
 while (walker.next) {
-    walker = walker.next;
+  walker = walker.next;
 }
 ```
 
@@ -105,7 +119,9 @@ But the nodes in doubly linked lists have one additional property:
 
 The upside of a doubly linked list is that it gives you more mobility than a singly linked list. The downside is that this makes adding or removing values much more complicated, because there are now two pointers — `next` and `previous` — that must be managed as you do so.
 
-tktk - Hunter can you add a diagram here of a doubly linked list?
+![Double Linked List](./assets/4-first-last-diagram.png)
+<br>
+<br>
 
 ## Uses for Linked Lists
 
@@ -117,6 +133,10 @@ Another example is an image viewer: Images are linked to both the previous and n
 
 Some file systems are also built as linked lists based on the way they store data. Files are often stored in chunks, but when they get too large, they might not fit into the original chunk. Those “chunks” are just nodes of data with links to the next section of a file that’s stored in another node.
 
+![Audio Player Face](./assets/5-Playlist.png)
+<br>
+<br>
+
 ## Let’s Talk About Interviews
 
 Linked lists are a common topic that comes up in technical job interviews. You can check out 20 example questions [here](https://www.geeksforgeeks.org/top-20-linked-list-interview-question/). Some highlights include:
@@ -126,3 +146,16 @@ Linked lists are a common topic that comes up in technical job interviews. You c
 - Traversing a linked list.
 
 Often, these concepts will appear as whiteboarding problems, so you won’t need to know how to code a linked list — just how to draw it and explain it conceptually. [This tool](https://visualgo.net/en/list?slide=1) can help you visualize adding, removing, and searching for values in a linked list.
+
+<br>
+
+![Brain](./assets/interviews.png)
+<br>
+
+## Linked Lists in Interviews
+
+TKTK VIDEO
+
+One of the interviewers came in and said we were going to whiteboard an algorithm, so I said, “Fine!” He said, “We’re going to do linked lists,” and then said, “I have to admit, I don’t know how to solve this problem, but let’s just see where we go.” So we started!
+
+I’m more a visual person, so the thing that was really great when I learned algorithms in WDI in San Francisco, and what I do with my students as well, is that I have them act things out and I draw things. I had a very good recall of what, visually, the linked list looked like, so I was able to draw that out and explain it, but I wasn’t able to take it beyond that point. But he was happy with what I had had so far.
