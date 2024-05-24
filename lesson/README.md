@@ -1,7 +1,5 @@
 # ![Computer Science - Linked Lists - Lesson](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
-
 Linked lists do it all. They’re an important and useful data structure in their own right, as well as a building block for lots of other data structures. In this lesson, you’ll learn how they work and how you can implement one yourself!
 
 ## Meet Linked Lists
@@ -17,7 +15,9 @@ In the case of linked lists, the only exception to this rule is the very last no
 
 ## Linked Lists vs. Arrays
 
-TKTK VIDEO
+<a href="https://generalassembly.wistia.com/medias/oi26sidjtu?wvideo=oi26sidjtu"><img src="https://embed-ssl.wistia.com/deliveries/be3886ae043117636e5b421fe8bf2b0cdfe12b01.jpg?image_crop_resized=900x506&image_play_button=true&image_play_button_size=2x&image_play_button_color=222222e0" alt="Linked Lists-draft" width="450" height="253" /></a>
+
+_Transcript_
 
 Let’s talk about linked lists versus arrays. The most important difference between them is how they use computer memory.
 
@@ -26,6 +26,8 @@ Imagine you’re a real estate investor in New York City looking to buy a new se
 This offer is like an array. In an array, your computer knows where each piece of data is stored. Why? Because it knows where the array starts and ends and how big each value is. Your computer can move from one location in the array to the next just as easily as you can walk up and down 11th Avenue. However, your computer needs to know the exact size of array before it can use the array. In our example, this means how many buildings you want to buy. If you ever want to expand, you’d have to find new, continuous, available space. And if you want to expand an array, you need a new block of memory that’s big enough to fit the array.
 
 The second offer is to purchase a bunch of different buildings around the city — uptown, downtown, even in Brooklyn! One building will be your headquarters, and you’ll have building managers who have the addresses of the other buildings you buy. Even though the buildings are spread out, with this offer, you’ll able to purchase more buildings as your business grows. This is how a linked list works. Linked lists can grow using pointers to other parts of the computer’s memory, just like you can keep expanding by purchasing buildings all over the city. Unlike an array, you don’t need to find continuous free space to store your data, which makes it easier to add new elements at different points in the list.
+
+_end of transcript_
 
 ## Linked List: Pros and Cons
 
@@ -45,12 +47,14 @@ Let’s compare the performance of arrays and linked lists:
 
 | Data Structure | Access | Search | Insertion | Deletion |
 | -------------- | ------ | ------ | --------- | -------- |
-| Array          | O(1)   | O(N)   | O(N)      | O(N)     |
-| Linked list    | O(N)   | O(N)   | O(1)      | O(1)     |
+| Array          | `O(1)` | `O(N)` | `O(N)`    | `O(N)`   |
+| Linked list    | `O(N)` | `O(N)` | `O(1)`    | `O(1)`   |
 
 ## Accessing and Searching
 
-TKTK VIDEO
+<a href="https://generalassembly.wistia.com/medias/thbta4e9it?wvideo=thbta4e9it"><img src="https://embed-ssl.wistia.com/deliveries/ff4623927214e6aa7e5306f8c459e28622084c6a.jpg?image_crop_resized=900x506&image_play_button=true&image_play_button_size=2x&image_play_button_color=222222e0" alt="Linked Lists- Video 2" width="450" height="253" /></a>
+
+*Transcript*
 
 Why are arrays so much easier to access and search than linked lists?
 
@@ -58,7 +62,9 @@ Let’s say you have five apples. You could organize them in an array with an in
 
 But if you arrange your apples as a linked list, they’re just set in a row with no index. If you were asked to find the third apple in this arrangement, you’d have to count from the beginning until you get to the third one. While this doesn’t sound difficult now, imagine that you have 500 apples and I asked you to find the 293rd one. Ugh. That’s why accessing for a linked list is O(N) — not as efficient — because it can become a lot longer pretty quickly.
 
-## Visualize It
+*end of transcript*
+
+## Visualize It : 1
 
 OK. When you’re building a linked list, the data and pointer properties of each node change as you build it out. To understand this better, let’s sketch out what a linked list looks like as it’s being built.
 
@@ -67,6 +73,8 @@ Any linked list starts with a `head` property that references the first node. Wh
 ![Head and Null](./assets/1-Head-Null.png)
 <br>
 <br>
+
+## Visualize It : 2
 
 The default (and easiest) place to add more nodes to a linked list is at the end of the list.
 
@@ -77,6 +85,8 @@ By default, this new node won’t need a pointer, because it will be the last no
 ![Node and Null](./assets/2-Node-Null.png)
 <br>
 <br>
+
+## Visualize It : 3
 
 For all future nodes that we add, we can find the last node by looking for the node with `null` as its `next` value. Once we find it, we can change its `next` property to now point to the new node we’re inserting into the list.
 
@@ -101,6 +111,15 @@ while (walker.next) {
 In our example, the `walker` variable conveys the idea that the variable “walks” through a list one node at a time. The `next` property points the `walker` variable to the `next` node in the list and continues to do so until we reach a node that doesn’t have a `next` property. That’s the end!
 
 But, that’s just how we make the code traverse the list. If we want to search for a specific value or access a specific point in the list, we could write a conditional inside the loop to read each node as we go.
+
+## The Importance of Next Pointers
+
+Ultimately, manipulating a linked list comes down to changing the pointer values of various nodes. If you’re inserting or removing nodes in a list, it’s critical to ensure that your `next` pointers never lose reference to the rest of the list.
+
+Inserting a new node at the end of a list is pretty straightforward. But placing one at the front or in the middle of a list can quickly get messy. If a `next` pointer is broken (that is, if it’s not pointing to the actual next value), the rest of the list will be impossible to reference.
+
+We won’t go into the complexities of how to reset your `next` properties here, but it’s an important concept to keep in mind when you start building and manipulating linked lists.
+
 
 ## Singly vs. Doubly Linked Lists
 
@@ -154,8 +173,12 @@ Often, these concepts will appear as whiteboarding problems, so you won’t need
 
 ## Linked Lists in Interviews
 
-TKTK VIDEO
+<a href="https://generalassembly.wistia.com/medias/v3fogvnt2p?wvideo=v3fogvnt2p"><img src="https://embed-ssl.wistia.com/deliveries/90f88ec8a383da3e95cd84f6278bd875f335a96e.jpg?image_crop_resized=900x506&image_play_button=true&image_play_button_size=2x&image_play_button_color=222222e0" alt="Celeste-002" width="450" height="253" /></a>
+
+*Transcript*
 
 One of the interviewers came in and said we were going to whiteboard an algorithm, so I said, “Fine!” He said, “We’re going to do linked lists,” and then said, “I have to admit, I don’t know how to solve this problem, but let’s just see where we go.” So we started!
 
 I’m more a visual person, so the thing that was really great when I learned algorithms in WDI in San Francisco, and what I do with my students as well, is that I have them act things out and I draw things. I had a very good recall of what, visually, the linked list looked like, so I was able to draw that out and explain it, but I wasn’t able to take it beyond that point. But he was happy with what I had had so far.
+
+*end of transcript*
