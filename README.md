@@ -22,7 +22,7 @@ By the end of this module, learners will be able to:
 There are two components to this module:
 
 1. Lesson: [Linked Lists](./lesson/README.md)
-2. Exercise: [Implementing a Linked List](https://git.generalassemb.ly/modular-curriculum-all-courses/linked-lists-starter-code)
+2. Exercise: [Implementing a Linked List](https://github.com/ga-curriculum/linked-lists-starter-code)
 
 ## Solution Code 
 
